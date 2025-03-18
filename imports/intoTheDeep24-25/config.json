@@ -1,1 +1,32 @@
-
+[
+  {
+    "img": "24-25bot.png",
+    "name": "Into the Deep, 2024/2025"
+  },
+  [
+    {
+      "name": "Acompt_FEB2025.java",
+      "task": "Teleop functions"
+    },
+    {
+      "name": "Auto_FEB2025.java",
+      "task": "Simple auto, turn left and park"
+    },
+    {
+      "name": "Auto2_FEB2025.java",
+      "task": "Simple auto, turn right and park"
+    },
+    {
+      "name": "AUTOComplex1.java",
+      "task": "Complex auto, Hangs samples with hook"
+    },
+    {
+      "name": "AUTOComplex2.java",
+      "task": "Complex auto, does high bucket"
+    },
+    {
+      "name": "Auto3.java",
+      "task": "Parks at the end of the field in the designated area"
+    }
+  ]
+]
