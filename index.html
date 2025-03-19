@@ -1,16 +1,65 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>GITBear - BearBots</title>
+        <title>gitBEAR - BearBots</title>
         <link rel="favicon" href="images/favicon.ico">
         <link rel="stylesheet" href="styles.css">
-        <script src="main.js"></script>
+        <style>
+            .robot {
+                border-radius: 15px;
+                margin-left: 30%;
+                margin-right: 30%;
+                padding: 5px;
+                background-color: orange;
+                height: 250px;
+                max-height: 300px;
+                place-items: center;
+            }
+            .robot img {
+                width: auto;
+                height: 230px;
+                float: left;
+                border-radius: 15px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                margin-left: 20px;
+            }
+            .robot h2 {
+                font-family: Geist Mono, Montserrat, monospace;
+                font-size: 45px;
+                overflow-wrap: anywhere;
+                word-wrap: break-word;
+                text-align: center;
+                margin-top: 10px;
+                margin-bottom: 100px;
+                margin-right: 20px;
+            }
+            .robot h3 {
+                float: right;
+                font-family: Geist Mono, Montserrat, monospace;
+                visibility: collapse;
+            }
+        </style>
     </head>
     <body>
         <div id="navbar">
-            <h1 id="linkTO-repo">Hi</h1>
+            <span class="repoButton" id="linkTO-repo">VIEW REPO</span>
             <img src="images/logo.png" id="mainLogo">
         </div>
-        </body>
+        <div style="height:100px"></div> 
+        <h1 class="montserratFONT">ONBOT JAVA MANAGEMENT SYSTEM</h1>
+        <h3>FOR BEARBOTS</h3>
+        <h4>When changes are merged, they will appear here. All files are hosted and merged via GitHub</h4>
+        <br><h1>View Bots Below</h1>
+        <div id="mainbody"></div>
     </body>
+    <script>
+        document.getElementById("mainLogo").onclick = function () {
+            window.location.href  = "index.html";
+        };
+        document.getElementById("linkTO-repo").onclick = function () {
+            window.location.href  = "https://github.com/bearbots-bhs/gitbear";
+        };
+    </script>
+    <script src="main.js"></script>
 </html>
