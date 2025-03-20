@@ -10,13 +10,19 @@
                 margin-left: 30%;
                 margin-right: 30%;
                 padding: 5px;
-                background-color: orange;
+                background-color: rgb(109, 109, 109);
                 height: 250px;
                 max-height: 300px;
                 place-items: center;
+                transition: background-color 0.5s;
+                color: white;
+            }
+            .robot:hover {
+                background-color: rgb(38, 85, 129);
             }
             .robot img {
                 width: auto;
+                max-width: 300px;
                 height: 230px;
                 float: left;
                 border-radius: 15px;
@@ -25,12 +31,13 @@
                 margin-left: 20px;
             }
             .robot h2 {
-                font-family: Geist Mono, Montserrat, monospace;
-                font-size: 45px;
+                font-family: Montserrat, monospace;
+                font-size: 35px;
                 overflow-wrap: anywhere;
                 word-wrap: break-word;
-                text-align: center;
-                margin-top: 10px;
+                text-align: right;
+                margin-left: 50px;
+                margin-top: 50px;
                 margin-bottom: 100px;
                 margin-right: 20px;
             }
@@ -38,6 +45,10 @@
                 float: right;
                 font-family: Geist Mono, Montserrat, monospace;
                 visibility: collapse;
+            }
+            a {
+                text-decoration: none;
+                color: black;
             }
         </style>
     </head>
@@ -51,7 +62,13 @@
         <h3>FOR BEARBOTS</h3>
         <h4>When changes are merged, they will appear here. All files are hosted and merged via GitHub</h4>
         <br><h1>View Bots Below</h1>
-        <div id="mainbody"></div>
+        <br><br><br>
+        <div id="mainbody">
+            <div class="robot" id="intoTheDeep24-25">
+                <img src="images/24-25bot.png">
+                <h2 class="montserratFONT">Into The Deep, 2024-2025</h2>
+            </div>
+        </div>
     </body>
     <script>
         document.getElementById("mainLogo").onclick = function () {
@@ -60,6 +77,15 @@
         document.getElementById("linkTO-repo").onclick = function () {
             window.location.href  = "https://github.com/bearbots-bhs/gitbear";
         };
+        document.getElementById("mainbody").onclick = function() {
+            window.location.href = "bot.html";
+        }
+
+
+        // BOTS:
+        document.getElementById("intoTheDeep24-25").onclick = function() {
+            localStorage.setItem("botDir", "intoTheDeep24-25");
+        }
     </script>
     <script src="main.js"></script>
 </html>

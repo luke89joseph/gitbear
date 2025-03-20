@@ -1,10 +1,15 @@
 
+
+
+
+/*
 console.log("start");
-fetch("https://raw.githubusercontent.com/bearbots-bhs/gitbear/main/imports/config.json")
+let image = "placeholder.png";
+fetch("https://raw.githubusercontent.com/bearbots-bhs/gitbear/refs/heads/main/imports/config.json")
     .then(function(response) {
         console.log(response);
-        return response;
-        //return response.json();  // Convert the response to JSON
+        //return response;
+        return response.json();  // Convert the response to JSON
     })
     .then(function(data) {
         for (let i = 0; i < data.length; i++) {
@@ -28,26 +33,28 @@ function renderBot(dir) {
         })
         .then(function(data) {
             if (data[0].img != null) {
-                let image = data[0].img;
+                image = data[0].img;
             }
             else {
-                let image = "placeholder.png";
+                image = "placeholder.png";
             }
 
             //console.log("k");
             document.getElementById("mainbody").innerHTML += `
+                <a href="bot.html">
                 <div class="robot" id="${dir}">
                     <img src="images/${image}">
                     <h2>${data[0].name}</h2>
                 </div>
+                </a>
+                <br>
             `;
             //console.log("o");
-            document.getElementById(dir).onclick = function () {
-                localStorage.setItem("botDir", dir);
-                window.location.href = "bot.html";
-            };
+            
+            
         })
         .catch(function(error) {
             console.error("Error fetching JSON", error);
         });
 }
+*/
